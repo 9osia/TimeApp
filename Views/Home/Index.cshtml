@@ -1,0 +1,34 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+<div class="row">
+    <div class="col-md-6">
+        <h2>TO DO </h2>
+        <p class="small">Nigdy nie ma wystarczającej ilości czasu, by zrobić <b>wszystko</b>,</p>
+        <p class="small">ale zawsze jest wystarczająca ilość, by zrobić to, co <b>najważniejsze</b>. </p>
+    </div>
+    <div class="col-md-6">
+        <h2></h2>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-4">
+        <h2>Dziś: <scan class="data">@DateTime.Today.ToString("dd-MM-yyyy")</scan> </h2>
+        <p>
+            Tutaj będzie lista zadań na dziś - partial view
+        </p>
+        <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301865">Learn more &raquo;</a></p>
+    </div>
+    <div class="col-md-4">
+        <h2>Ten tydzień: </h2>
+        <p>tutaj bedzie lista nieskonczonych zadan na ten tydzien </p>
+        <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301866">Learn more &raquo;</a></p>
+    </div>
+    <div class="col-md-4">
+        <h2>Brak terminu</h2>
+        <p>do zrobienia, ale bez terminu</p>
+        <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301867">Learn more &raquo;</a></p>
+    </div>
+</div>
