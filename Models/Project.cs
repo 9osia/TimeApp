@@ -9,6 +9,9 @@ namespace TimeApp.Models
     {
         public string Name { get; set; }
         public string Description { get; set; }
-        
+        public int TaskCounter { get; set; }
+
+        public virtual ICollection<Item> Items { get; set; }
+
     }
 }

@@ -1,34 +1,61 @@
-﻿@{
-    ViewBag.Title = "Home Page";
+﻿@model IEnumerable<TimeApp.Models.Item>
+
+@{
+    ViewBag.Title = "TO DO";
 }
 
 <div class="row">
     <div class="col-md-6">
-        <h2>TO DO </h2>
-        <p class="small">Nigdy nie ma wystarczającej ilości czasu, by zrobić <b>wszystko</b>,</p>
-        <p class="small">ale zawsze jest wystarczająca ilość, by zrobić to, co <b>najważniejsze</b>. </p>
+        <h1></h1>
+        <!--<p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301865"> Nowe zadanie &raquo;</a></p> -->
+        @Html.ActionLink("Nowe zadanie", "Create", "Items") 
     </div>
     <div class="col-md-6">
-        <h2></h2>
+        <h1></h1>
+        <p class="small">
+            Nigdy nie ma wystarczającej ilości czasu, by zrobić <b>wszystko</b>, <br />
+            ale zawsze jest wystarczająca ilość, by zrobić to, co <b>najważniejsze</b>.
+        </p>
     </div>
 </div>
 
 <div class="row">
     <div class="col-md-4">
-        <h2>Dziś: <scan class="data">@DateTime.Today.ToString("dd-MM-yyyy")</scan> </h2>
-        <p>
-            Tutaj będzie lista zadań na dziś - partial view
-        </p>
-        <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301865">Learn more &raquo;</a></p>
+        <h2>Dziś: <scan class="small">@DateTime.Today.ToString("D")</scan> </h2>
+        <div>
+            <ul>
+                <li>zad 1</li>
+                <li>zad 2</li>
+                <li>zad 3</li>
+                <li>zad 4</li>
+                <li>zad 5</li>
+            </ul>
+        </div>
     </div>
     <div class="col-md-4">
-        <h2>Ten tydzień: </h2>
-        <p>tutaj bedzie lista nieskonczonych zadan na ten tydzien </p>
-        <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301866">Learn more &raquo;</a></p>
+        <h2>Ten tydzień:</h2>
+        <div>
+            <ul>
+                <li>zad 1</li>
+                <li>zad 2</li>
+                <li>zad 3</li>
+                <li>zad 4</li>
+                <li>zad 5</li>
+            </ul>
+        </div>
     </div>
     <div class="col-md-4">
         <h2>Brak terminu</h2>
-        <p>do zrobienia, ale bez terminu</p>
-        <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301867">Learn more &raquo;</a></p>
+        <div>
+            <ul>
+                <li>zad 1</li>
+                <li>zad 2</li>
+                <li>zad 3</li>
+                <li>zad 4</li>
+                <li>zad 5</li>
+            </ul>
+        </div>
+        <!--<p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301867">Zaplanuj &raquo;</a></p>-->
+        @Html.ActionLink("Zaplanuj", "Index", "Items")
     </div>
 </div>

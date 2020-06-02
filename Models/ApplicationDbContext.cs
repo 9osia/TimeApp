@@ -14,8 +14,7 @@ namespace TimeApp.Models
         {
         }
 
-        public DbSet<Action> Tasks { get; set; }
-        public DbSet<SubAction> Subtasks { get; set; }
+        public DbSet<Item> Items { get; set; }
         public DbSet<Project> Projects { get; set; }
 
         public static ApplicationDbContext Create()
